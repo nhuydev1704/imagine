@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "compile": "tsc --noEmit -p . --pretty",
     "start": "react-native start",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "pod": "cd ios && pod install && cd .."
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.4.5",
