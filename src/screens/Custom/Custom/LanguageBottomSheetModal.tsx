@@ -27,10 +27,10 @@ export const LanguageBottomSheetModal = () => {
       name="langauge"
       ref={bottomSheetModalRef}
       title={t('language_bottomsheet_title')}
-      leftButtonTitle="한국어"
+      leftButtonTitle="Vietnamese"
       rightButtonTitle="English"
       onPressLeft={() => {
-        dispatch(settingActions.changeLanguage('kor'));
+        dispatch(settingActions.changeLanguage('vi'));
         dismiss('langauge');
       }}
       onPressRight={() => {

@@ -71,7 +71,7 @@ export const ParamActionList = ({ navigation, route }: ParamActionProps) => {
   const { appId, actionId, type } = route.params;
   const matchedAction = useMatchedAction(appId, actionId);
   const gestureToActionMap = useAppSelector(selectGestureToActionMap);
-  const showUrlSchemeHelp = useCurrentLangauge() === 'kor';
+  const showUrlSchemeHelp = useCurrentLangauge() === 'vi';
   const filteredParamActionList = useMemo(
     () =>
       Object.entries(gestureToActionMap).filter(

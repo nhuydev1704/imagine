@@ -1,0 +1,8 @@
+{
+  "message": {
+    "downloading": "Đang tải cập nhật · ",
+    "installing": "Đang cài đặt cập nhật...",
+    "success": "Yêu cầu khởi động lại để sử dụng cập nhật."
+  },
+  "restartButton": "Khởi động lại ngay"
+}

@@ -23,6 +23,7 @@ import { Action, App } from '../../features/action/types';
 import { Gesture } from '../../features/gesture/types';
 import { CUSTOM_URL_SCHEME_ID } from '../../features/action/consts';
 import { useTranslation } from 'react-i18next';
+import { FlatList } from 'react-native';
 
 interface AppRowProps {
   app: App;
@@ -33,54 +34,56 @@ interface AppRowProps {
   onRemove?: () => void;
 }
 
-const AppRow = ({
-  app: { id, name, actions },
-  numActiveActions,
-  hasBottomBorder,
-  gestureName,
-  onPress,
-  onRemove,
-}: AppRowProps) => {
-  const { t } = useTranslation('appList');
+const AppRow = React.memo(
+  ({
+    app: { id, name, actions },
+    numActiveActions,
+    hasBottomBorder,
+    gestureName,
+    onPress,
+    onRemove,
+  }: AppRowProps) => {
+    const { t } = useTranslation('appList');
 
-  return (
-    <ListRow
-      key={id}
-      left={<AppIcon id={id} name={name} />}
-      right={
-        numActiveActions === 0 ? (
-          <IonIcon name="add-circle-outline" color="gray.500" size={8} />
-        ) : actions.length === 1 ? (
-          <AnimatedIconButton
-            name="remove-circle-outline"
-            color="red.500"
-            size={8}
-            onPress={onRemove}
-          />
-        ) : (
-          <ProgressIcon progress={numActiveActions} total={actions.length} />
-        )
-      }
-      title={name}
-      description={
-        actions.length === 1
-          ? gestureName
-            ? t('gesture_description', { gestureName })
-            : actions[0].description
-          : numActiveActions > 0
-          ? t('num_active_actions', {
-              numActions: actions.length,
-              numActiveActions,
-            })
-          : t('num_actions', {
-              numActions: actions.length,
-            })
-      }
-      hasBottomBorder={hasBottomBorder}
-      onPress={onPress}
-    />
-  );
-};
+    return (
+      <ListRow
+        key={id}
+        left={<AppIcon id={id} name={name} />}
+        right={
+          numActiveActions === 0 ? (
+            <IonIcon name="add-circle-outline" color="gray.500" size={8} />
+          ) : actions.length === 1 ? (
+            <AnimatedIconButton
+              name="remove-circle-outline"
+              color="red.500"
+              size={8}
+              onPress={onRemove}
+            />
+          ) : (
+            <ProgressIcon progress={numActiveActions} total={actions.length} />
+          )
+        }
+        title={name}
+        description={
+          actions.length === 1
+            ? gestureName
+              ? t('gesture_description', { gestureName })
+              : actions[0].description
+            : numActiveActions > 0
+            ? t('num_active_actions', {
+                numActions: actions.length,
+                numActiveActions,
+              })
+            : t('num_actions', {
+                numActions: actions.length,
+              })
+        }
+        hasBottomBorder={hasBottomBorder}
+        onPress={onPress}
+      />
+    );
+  },
+);
 
 type AppListProps = NativeStackScreenProps<CustomStackParamList, 'AppList'>;
 
@@ -101,8 +104,13 @@ export const AppList = ({ navigation }: AppListProps) => {
           title={t('header.title')}
           description={t('header.description')}
         />
-        <ScrollableList>
-          {appList.map((app, idx) => {
+
+        <FlatList
+          data={appList}
+          initialNumToRender={10} // Render 10 items initially
+          maxToRenderPerBatch={20} // Render 20 items per batch
+          windowSize={30} // Keep 30 pages in memory
+          renderItem={({ item: app, index: idx }) => {
             if (app.id === CUSTOM_URL_SCHEME_ID) {
               return;
             }
@@ -149,8 +157,16 @@ export const AppList = ({ navigation }: AppListProps) => {
                 }
               />
             );
+          }}
+          keyExtractor={item => item.id}
+        />
+
+        {/* <ScrollableList>
+
+          {appList.map((app, idx) => {
+
           })}
-        </ScrollableList>
+        </ScrollableList> */}
       </ScreenContainer>
       <GesturePickerBottomSheetModal
         ref={gesturePickerBottomSheetModalRef}

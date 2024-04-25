@@ -1,0 +1,19 @@
+{
+  "header": {
+    "title": "Thống kê",
+    "description": "Kiểm tra các hành động yêu thích của bạn"
+  },
+  "countInfo": {
+    "num_actions": "# Hành động đang sử dụng",
+    "num_actions_today": "# Hành động hôm nay",
+    "num_actions_per_day": "# Hành động mỗi ngày"
+  },
+  "message": {
+    "no_actions_today": "Bạn chưa thực hiện bất kỳ hành động nào hôm nay!",
+    "more_actions_today": "Hôm nay, bạn đã thực hiện nhiều hành động hơn bình thường",
+    "less_actions_today": "Hôm nay, bạn đã thực hiện ít hành động hơn bình thường!",
+    "same_actions_today": "Hôm nay, bạn đã thực hiện hành động như bình thường!"
+  },
+  "see_all": "Xem tất cả",
+  "detail_title": "Thống kê Hành động hôm nay"
+}

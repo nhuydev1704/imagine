@@ -1,0 +1,38 @@
+{
+  "title": "Cử chỉ Tùy chỉnh",
+  "description": "Chọn một hành động & Vẽ cử chỉ của bạn",
+  "gestures": "Cử chỉ của Tôi",
+  "actions": "Hành động của Tôi",
+  "app_title": "Ứng dụng",
+  "app_description": "Hỗ trợ ứng dụng của Apple & ứng dụng của bên thứ ba",
+  "shortcut_title": "Lối tắt",
+  "shortcut_description": "Chỉ nhập tên của lối tắt",
+  "native_action_title": "Hành động Linky",
+  "native_action_description": "Giúp bạn sử dụng iPhone hiệu quả hơn",
+  "custom_url_scheme_title": "Lược đồ URL Tùy chỉnh",
+  "custom_url_scheme_description": "Tạo hành động tùy chỉnh của riêng bạn",
+  "toast_message": "Tính năng này đang được phát triển",
+  "language_bottomsheet_title": "Chọn Ngôn ngữ của Bạn",
+  "help_bottomsheet": {
+    "title": "Tìm hiểu Cách Sử dụng Linky!",
+    "desription": "5 Bước để sử dụng ứng dụng Linky một cách thông minh",
+    "left_button_title": "Không phải bây giờ",
+    "right_button_title": "OK"
+  },
+  "new_feature_bottomsheet": {
+    "title": "Tính năng Mới!",
+    "auto_launch": {
+      "title": "Chế độ Tự động Khởi chạy (BẬT / TẮT)",
+      "description": "Vẽ một cử chỉ và chỉ cần thả tay để thực hiện một hành động."
+    },
+    "gesture_drawing_screen": {
+      "title": "Tùy chỉnh Màn hình Vẽ Cử chỉ",
+      "description": "Bạn có thể điều chỉnh vị trí của các nút."
+    },
+    "more_apps": {
+      "title": "Hỗ trợ Thêm Ứng dụng",
+      "description": "Đã thêm 30 ứng dụng và 34 hành động."
+    },
+    "right_button_title": "Đi đến Cài đặt"
+  }
+}

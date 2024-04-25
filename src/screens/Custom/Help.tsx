@@ -244,7 +244,7 @@ const HelpCarousel = ({ onSnapToItem }: HelpCarouselProps) => {
   const { width } = useWindowDimensions();
   const ref = useRef<ICarouselInstance>(null);
   const langauge = useCurrentLangauge();
-  const data = langauge === 'kor' ? HELP_CARD_DATA_KO : HELP_CARD_DATA_EN;
+  const data = langauge === 'vi' ? HELP_CARD_DATA_EN : HELP_CARD_DATA_EN;
 
   return (
     <Carousel
@@ -288,7 +288,7 @@ interface HelpDescriptionProps {
 const HelpDescription = ({ index }: HelpDescriptionProps) => {
   const language = useCurrentLangauge();
   const data =
-    language === 'kor' ? HELP_DESCRIPTION_DATA_KO : HELP_DESCRIPTION_DATA_EN;
+    language === 'vi' ? HELP_DESCRIPTION_DATA_EN : HELP_DESCRIPTION_DATA_EN;
 
   return (
     <Box h={202} mx={-6}>

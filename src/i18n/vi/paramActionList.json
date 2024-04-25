@@ -1,0 +1,11 @@
+{
+  "shortcuts": {
+    "title": "Lối tắt",
+    "description": "Chạy lối tắt và hoàn thành nhiệm vụ nhanh chóng"
+  },
+  "custom_url_scheme": {
+    "title": "Lược đồ URL Tùy chỉnh",
+    "description": "Thêm hành động tùy chỉnh của bạn bằng cách sử dụng lược đồ URL",
+    "help": "Lược đồ URL là gì?"
+  }
+}

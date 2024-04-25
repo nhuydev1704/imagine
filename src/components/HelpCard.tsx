@@ -68,7 +68,7 @@ export const HelpCard = ({
   onPressBack,
   onPressForward,
 }: Props) => {
-  const prefix = useCurrentLangauge() === 'kor' ? 'ko' : 'en';
+  const prefix = useCurrentLangauge() === 'vi' ? 'vi' : 'en';
   const { key, ...restImageProps } = imageMap[imageId];
 
   return (
@@ -117,7 +117,7 @@ export const HelpCard = ({
         resizeMode="contain"
         alt={key}
         source={{
-          uri: getStaticImageUrl(`/help/${prefix}/${key}.png`),
+          uri: getStaticImageUrl(`/help/en/${key}.png`),
         }}
         fallbackElement={<></>}
         {...restImageProps}

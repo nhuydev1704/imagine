@@ -1,15 +1,14 @@
 import { useMemo } from 'react';
-import { useCurrentLangauge } from './useCurrentLanguage';
-import { appList as appListKo } from '../features/action/app_ko';
 import { appList as appListEn } from '../features/action/app_en';
 import { App } from '../features/action/types';
+import { useCurrentLangauge } from './useCurrentLanguage';
 
 export const useAppList = () => {
   const langauge = useCurrentLangauge();
   return useMemo(
     () =>
-      langauge === 'kor'
-        ? [...appListKo].sort(compareApps)
+      langauge === 'vi'
+        ? [...appListEn].sort(compareApps)
         : [...appListEn].sort(compareApps),
     [langauge],
   );

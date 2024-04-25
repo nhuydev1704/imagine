@@ -16,6 +16,8 @@ export const ScrollableList = ({ children }: Props) => {
       mb={-6}
       scrollIndicatorInsets={{ top: 0, bottom: bottomInset }}
       automaticallyAdjustsScrollIndicatorInsets={false}
+      pagingEnabled
+      removeClippedSubviews
     >
       <VStack safeAreaBottom>{children}</VStack>
     </ScrollView>

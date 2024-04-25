@@ -1,6 +1,30 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
-    "typeRoots": ["./node_modules/@types/", "./src/@types/"]
+      "module": "commonjs",
+      "target": "es5",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "noEmitHelpers": true,
+      "noEmitOnError": true,
+      "skipLibCheck": true,
+      "lib": [
+          "es6",
+          "dom",
+          "es2017"
+      ],
+      "baseUrl": ".",
+      "paths": {
+          "~/*": [
+              "app/*"
+          ],
+          "*": [
+              "./node_modules/tns-core-modules/*",
+              "./node_modules/*"
+          ]
+      }
+  },
+  "exclude": [
+      "node_modules",
+      "platforms"
+  ]
   }
-}

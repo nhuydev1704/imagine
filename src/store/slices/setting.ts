@@ -4,7 +4,7 @@ import { RootState } from '..';
 import { getLocaleLanguage } from '../../utils';
 
 export type ThemeMode = 'light' | 'dark' | 'system';
-export type Language = 'kor' | 'eng' | 'locale';
+export type Language = 'vi' | 'eng' | 'locale';
 export type BlankCanvasButtonPosition =
   | 'top right'
   | 'top left'
@@ -51,7 +51,7 @@ const settingSlice = createSlice({
     },
     changeLanguage: (state, action: PayloadAction<Language>) => {
       state.language = action.payload;
-      i18next.changeLanguage(action.payload === 'eng' ? 'en' : 'ko');
+      i18next.changeLanguage(action.payload === 'eng' ? 'en' : 'vi');
     },
     changeLanguageFromLocale: state => {
       state.language = getLocaleLanguage();

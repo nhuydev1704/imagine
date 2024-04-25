@@ -1,0 +1,31 @@
+{
+  "gesture_list": "Cử chỉ của Tôi",
+  "action_list": "Hành động của Tôi",
+  "add_gesture": "Cử chỉ Mới",
+  "unassigned_gesture": "Cử chỉ chưa được gán",
+  "message": {
+    "remove_gesture": "Cử chỉ {{name}} đã được xóa",
+    "remove_action": "Hành động {{name}} đã được xóa",
+    "enter_gesture_name": "Nhập tên cử chỉ",
+    "draw_gesture": "Vui lòng vẽ một cử chỉ",
+    "no_dot_stroke": "Không được phép chấm",
+    "not_allowed": "Cử chỉ này không được phép",
+    "one_time_left": "Còn 1 lần",
+    "few_times_left": "Còn {{num}} lần",
+    "gesture_added": "Đã thêm thành công",
+    "no_gesture_in_use": "Không có cử chỉ nào đang được sử dụng",
+    "inexecutable_action": "Không thể thực hiện hành động này",
+    "cannot_find_action": "Không tìm thấy hành động"
+  },
+  "gestureAddition": {
+    "name_placeholder": "Tên cử chỉ",
+    "title": "Cử chỉ Mới",
+    "clear": "Xóa"
+  },
+  "gesturePicker": {
+    "title": "Cử chỉ",
+    "new_gesture": "Cử chỉ Mới",
+    "can_select": "Có sẵn",
+    "hide_gesture_in_use": "Ẩn cử chỉ đang sử dụng"
+  }
+}

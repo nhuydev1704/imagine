@@ -80,9 +80,9 @@ const SettingThemeModeRow = () => {
 };
 
 const languageCaption: Record<Language, string> = {
-  kor: '한국어',
+  vi: 'Vietnamese',
   eng: 'English',
-  locale: getLocaleLanguage() === 'kor' ? '한국어' : 'English',
+  locale: getLocaleLanguage() === 'vi' ? 'Vietnamese' : 'English',
 };
 
 const SettingLanguageRow = () => {

@@ -71,11 +71,7 @@ export const Custom = ({ navigation }: RootTabScreenProps<'Custom'>) => {
             }
           />
         </VStack>
-        <VStack
-          flex={1}
-          space={height < 700 ? 2 : 6}
-          my={height < 700 ? -4 : 0}
-        >
+        <VStack space={6}>
           <Feature
             iconName="logo-apple-appstore"
             title={t('app_title')}
@@ -99,7 +95,7 @@ export const Custom = ({ navigation }: RootTabScreenProps<'Custom'>) => {
               })
             }
           />
-          <Feature
+          {/* <Feature
             iconName="logo-apple"
             title={t('native_action_title')}
             caption={t('native_action_description')}
@@ -113,7 +109,7 @@ export const Custom = ({ navigation }: RootTabScreenProps<'Custom'>) => {
                 bg: 'gray.300',
               });
             }}
-          />
+          /> */}
           <Feature
             iconName="globe"
             title={t('custom_url_scheme_title')}

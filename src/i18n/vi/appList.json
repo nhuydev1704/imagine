@@ -1,0 +1,9 @@
+{
+  "header": {
+    "title": "Ứng dụng",
+    "description": "Mở ứng dụng & Thực hiện các hành động cụ thể"
+  },
+  "gesture_description": "Cử chỉ {{gestureName}}",
+  "num_active_actions": "Sử dụng {{numActiveActions}} / {{numActions}} hành động",
+  "num_actions": "{{numActions}} hành động"
+}

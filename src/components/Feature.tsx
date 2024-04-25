@@ -39,7 +39,7 @@ export const Feature = ({ iconName, title, caption, onPress }: Props) => {
 
   return (
     <Pressable
-      flex={1}
+      height={90}
       onPress={onPress}
       onPressIn={() => {
         progress.value = withTiming(1, {
@@ -65,8 +65,8 @@ export const Feature = ({ iconName, title, caption, onPress }: Props) => {
         style={style}
       >
         <HStack space={3}>
-          <IonIcon name={iconName} size={60} color="gray.900" />
-          <VStack space={3.5} justifyContent="center">
+          <IonIcon name={iconName} size={39} color="gray.900" />
+          <VStack space={2.5} justifyContent="center">
             <Typography variant="subtitle1">{title}</Typography>
             <Typography variant="caption" color="gray.600">
               {caption}
